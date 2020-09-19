@@ -17,6 +17,7 @@ def user_inputs():
 
 def extract_from_db_OR(labels_count):
     conn = sqlite3.connect("/home/ec2-user/data_filter/test.db")
+    # database connected
     filter_command = '''WITH SCORE_FILTERED AS (SELECT * 
                                                 FROM CLASSIFICATION
                                                 WHERE SCORE > 0.5)
